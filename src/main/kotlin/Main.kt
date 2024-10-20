@@ -81,7 +81,7 @@ private fun loadSettings() {
 
 private fun getFiles(current: Path): Set<File>? {
     if (!current.isDirectory() || !current.exists() || current.toFile().listFiles() == null) return null
-    return current.toFile().listFiles()?.toSet()
+    return current.toFile().listFiles()?.filter { f -> !f.name.matches(Regex("^AmountChecker.*\\.jar$")) && f.name != SETTINGS_FILE }?.toSet()
 }
 
 private fun getSortedFiles(files: Set<File>): MutableList<File> {
