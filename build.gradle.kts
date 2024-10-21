@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "online.aruka.amountChecker"
-version = "0.1-SNAPSHOT"
+version = "0.1.1"
 
 repositories {
     mavenCentral()
